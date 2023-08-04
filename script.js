@@ -22,16 +22,16 @@ const promise3 = new Promise((resolve,reject) => {
 
 Promise.all([promise1,promise2,promise3]).then((values) => {
 	const output = document.getElementById("output");
-	output.innerHTML = `<tr>
-          <th>Promise 1</th>
+	output.innerHTML = `<tr id="loading">
+          <th>promise1</th>
           <th>${values[0]}</th>
         </tr>
 		<tr>
-          <th>Promise 2</th>
+          <th>promise2</th>
           <th>${values[1]}</th>
         </tr>
 		<tr>
-          <th>Promise 3</th>
+          <th>promise3</th>
           <th>${values[2]}</th>
         </tr>`
 })
